@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create and Remove Elements</title>
+</head>
+<body>
+
+<button onclick="add()">Add Paragraph</button>
+<button onclick="remove()">Remove Paragraph</button>
+
+<div id="container"></div>
+
+<script>
+function add() {
+    let p = document.createElement("p");
+    p.id = "para";
+    p.innerHTML = "This paragraph is created using JavaScript.";
+    document.getElementById("container").appendChild(p);
+}
+
+function remove() {
+    let para = document.getElementById("para");
+    if (para) {
+        para.remove();
+    }
+}
+</script>
+
+</body>
+</html>
